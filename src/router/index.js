@@ -1,11 +1,11 @@
 import {createWebHistory, createRouter} from "vue-router";
-import Home from "@/Home.vue";
+import GenAIPage from "@/pages/GenAIPage.vue";
 
 const routes = [
     {
-        name: 'Home',
-        path: '/',
-        component: Home,
+        name: 'GenAIPage',
+        path: '/', //'/' will not be genAIPage. Just for testing.
+        component: GenAIPage,
     },
 ]
 
