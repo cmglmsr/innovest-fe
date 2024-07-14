@@ -1,11 +1,23 @@
 import {createWebHistory, createRouter} from "vue-router";
 import GenAIPage from "@/pages/GenAIPage.vue";
+import LoginPage from "@/pages/LoginPage.vue";
+import RegisterPage from "@/pages/RegisterPage.vue";
 
 const routes = [
     {
         name: 'GenAIPage',
-        path: '/', //'/' will not be genAIPage. Just for testing.
+        path: '/', //just for testing
         component: GenAIPage,
+    },
+    {
+        name: 'LoginPage',
+        path: '/login', 
+        component: LoginPage,
+    },
+    {
+        name: 'RegisterPage',
+        path: '/subscribe', 
+        component: RegisterPage,
     },
 ]
 

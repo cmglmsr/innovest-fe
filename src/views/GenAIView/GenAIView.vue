@@ -1,7 +1,7 @@
 <template>
   <div>
     <Navbar/>
-    <div class="background-image"></div>
+    <div class="background-img"></div>
     <GenAIInputBox/>
   </div>
 </template>

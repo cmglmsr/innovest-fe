@@ -63,12 +63,12 @@
   display: none;
 }
 
-.auth-buttons {
+.auth-buttons-navbar {
   display: flex;
   align-items: center;
 }
 
-.auth-button {
+.auth-button-navbar {
   color: #fff;
   text-decoration: none;
   padding: 0.5rem 1rem;
@@ -78,11 +78,11 @@
   transition: all 0.3s ease;
 }
 
-.auth-button.subscribe {
+.auth-button-navbar.subscribe {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.auth-button:hover {
+.auth-button-navbar:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -148,7 +148,7 @@
     font-size: 1rem;
   }
 
-  .auth-buttons {
+  .auth-buttons-navbar {
     position: absolute;
     right: 1.5rem;
     top: 1rem;
@@ -157,7 +157,7 @@
     align-items: flex-end;
   }
 
-  .auth-button {
+  .auth-button-navbar {
     margin: 0.5rem 0;
     font-size: 1rem;
   }

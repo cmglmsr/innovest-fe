@@ -1,27 +1,27 @@
 <template>
   <nav class="navbar">
     <div class="navbar-container">
-      <a href="#" class="navbar-logo">Innovest</a>
+      <router-link to="/" class="navbar-logo">Innovest</router-link>
       <div class="menu-icon" @click="toggleMenu">
         <i :class="[isNavbarMenuOpen ? 'fas fa-times' : 'fas fa-bars']"></i>
       </div>
       <ul :class="['nav-menu', { 'active': isNavbarMenuOpen }]">
         <li class="nav-item">
-          <a href="#" class="nav-links">Dashboard</a>
+          <router-link to="/" class="nav-links">Dashboard</router-link>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-links">Stocks</a>
+          <router-link to="/stocks" class="nav-links">Stocks</router-link>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-links">ETFs</a>
+          <router-link to="/etfs" class="nav-links">ETFs</router-link>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-links">GENAI Analysis</a>
+          <router-link to="/genai-analysis" class="nav-links">GENAI Analysis</router-link>
         </li>
       </ul>
-      <div class="auth-buttons">
-        <a v-if="!isSmallScreen" href="#" class="auth-button">Login</a>
-        <a v-if="!isSmallScreen" href="#" class="auth-button subscribe">Subscribe</a>
+      <div class="auth-buttons-navbar">
+        <router-link v-if="!isSmallScreen" to="/login" class="auth-button-navbar">Login</router-link>
+        <router-link v-if="!isSmallScreen" to="/subscribe" class="auth-button-navbar subscribe">Subscribe</router-link>
         <div v-else class="icon-buttons">
           <i class="fas fa-user-circle" @click="handleLoginClick"></i>
           <i class="fas fa-user-plus" @click="handleSubscribeClick"></i>
@@ -47,8 +47,10 @@ export default {
       this.isNavbarMenuOpen = !this.isNavbarMenuOpen;
     },
     handleLoginClick() {
+      this.$router.push({ name: 'LoginPage' });
     },
     handleSubscribeClick() {
+      this.$router.push({ name: 'RegisterPage' });
     },
     checkScreenSize() {
       this.isSmallScreen = window.innerWidth <= 960;

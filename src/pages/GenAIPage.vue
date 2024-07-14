@@ -1,5 +1,5 @@
 <template>
-  <GenAIView></GenAIView>
+  <GenAIView/>
 </template>
 
 <script>
