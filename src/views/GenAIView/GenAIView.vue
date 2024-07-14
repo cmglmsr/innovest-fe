@@ -1,18 +1,23 @@
 <template>
   <div>
-    <Navbar />
+    <Navbar/>
     <div class="background-image"></div>
+    <GenAIInputBox/>
   </div>
 </template>
 
 <script>
 import Navbar from "@/components/Navbar/Navbar.vue";
+import GenAIInputBox from '@/components/GenAIInputBox/GenAIInputBox.vue';
 import "./style.css";
+
 
 export default {
   name: "GenAIView",
   components: {
     Navbar,
+    GenAIInputBox
   },
 };
 </script>
+

@@ -63,6 +63,40 @@
   display: none;
 }
 
+.auth-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.auth-button {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-left: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+.auth-button.subscribe {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.auth-button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.icon-buttons {
+  display: flex;
+}
+
+.icon-buttons i {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 960px) {
   .navbar-container {
     justify-content: center;
@@ -112,6 +146,29 @@
     width: 100%;
     padding: 1rem 0;
     font-size: 1rem;
+  }
+
+  .auth-buttons {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .auth-button {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+  }
+
+  .icon-buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  .icon-buttons i {
+    font-size: 1.8rem;
   }
 }
 

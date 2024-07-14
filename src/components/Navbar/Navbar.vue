@@ -19,6 +19,14 @@
           <a href="#" class="nav-links">GENAI Analysis</a>
         </li>
       </ul>
+      <div class="auth-buttons">
+        <a v-if="!isSmallScreen" href="#" class="auth-button">Login</a>
+        <a v-if="!isSmallScreen" href="#" class="auth-button subscribe">Subscribe</a>
+        <div v-else class="icon-buttons">
+          <i class="fas fa-user-circle" @click="handleLoginClick"></i>
+          <i class="fas fa-user-plus" @click="handleSubscribeClick"></i>
+        </div>
+      </div>
     </div>
   </nav>
 </template>
@@ -31,12 +39,27 @@ export default {
   data() {
     return {
       isNavbarMenuOpen: false,
+      isSmallScreen: false,
     };
   },
   methods: {
     toggleMenu() {
       this.isNavbarMenuOpen = !this.isNavbarMenuOpen;
     },
+    handleLoginClick() {
+    },
+    handleSubscribeClick() {
+    },
+    checkScreenSize() {
+      this.isSmallScreen = window.innerWidth <= 960;
+    },
+  },
+  mounted() {
+    this.checkScreenSize();
+    window.addEventListener("resize", this.checkScreenSize);
+  },
+  beforeDestroy() {
+    window.removeEventListener("resize", this.checkScreenSize);
   },
 };
 </script>
