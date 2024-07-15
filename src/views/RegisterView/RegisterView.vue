@@ -4,7 +4,7 @@
     <div class="auth-content">
       <h1 class="auth-title">Innovest</h1>
       <form class="auth-form">
-        <p class="auth-text">Register</p>
+        <p class="auth-text">Subscribe</p>
         <div class="form-group">
           <input
             type="email"
@@ -23,10 +23,10 @@
             required
           />
         </div>
-        <button type="submit" class="auth-button">Register</button>
+        <button type="submit" class="auth-button">Subscribe</button>
       </form>
       <p class="auth-link">
-        Already have an account? <a href="#">Login</a>
+        Already have an account? <a href="/login">Login</a>
       </p>
     </div>
   </div>

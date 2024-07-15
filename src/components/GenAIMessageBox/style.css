@@ -1,0 +1,43 @@
+.message-box {
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 10px;
+    max-width: 80%;
+    word-wrap: break-word;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .message-box.user {
+    align-self: flex-end;
+    background-color: #f0f0f0;
+    color: #333;
+  }
+  
+  .message-box.system {
+    align-self: flex-start;
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  .message-prompt {
+    font-weight: bold;
+    color: #555;
+    margin-right: 8px;
+  }
+  
+  @media screen and (max-width: 960px) {
+    .message-box {
+      max-width: 90%;
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .message-box {
+      max-width: 100%;
+      font-size: 0.8rem;
+    }
+  }
+  

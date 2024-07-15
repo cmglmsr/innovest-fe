@@ -26,7 +26,7 @@
         <button type="submit" class="login-button">Login</button>
       </form>
       <p class="register-text">
-        Don't have an account? <a href="#">Register</a>
+        Don't have an account? <a href="/subscribe">Subscribe</a>
       </p>
     </div>
   </div>
