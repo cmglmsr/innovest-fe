@@ -9,7 +9,8 @@
         :text="message.text"
         :type="message.type"
       />
-      <GenAIInputBox @sendMessage="handleSendMessage" />
+      <div v-if="loading" class="relative left-0 mx-auto bg-red-500 w-32 h-32">LOADING</div>
+      <GenAIInputBox v-model:loading="loading" @sendMessage="handleSendMessage" />
     </div>
   </div>
 </template>
@@ -29,7 +30,8 @@ export default {
   },
   data() {
     return {
-      messages: []
+      messages: [],
+      loading: false
     };
   },
   methods: {

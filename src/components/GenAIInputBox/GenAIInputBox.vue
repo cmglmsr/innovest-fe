@@ -9,16 +9,26 @@
 
 <script>
 import "./style.css";
+import {testRequest} from "@/services/testService.js";
 
 export default {
   name: "GenAIInputBox",
   data() {
     return {
-      userMessage: ''
+      userMessage: '',
+      genAIResponse: '',
     };
   },
+  props: {
+    loading: {
+
+    }
+  },
   methods: {
-    sendMessage() {
+    async sendMessage() {
+      this.$emit('update:loading', true)
+      this.genAIResponse = await testRequest({userMessage: this.userMessage})
+      this.$emit('update:loading', false)
       if (this.userMessage.trim()) {
         this.$emit('sendMessage', this.userMessage);
         this.userMessage = '';
