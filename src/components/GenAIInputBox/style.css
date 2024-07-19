@@ -52,6 +52,17 @@
   background-color: #5a6268; 
 }
 
+
+.send-button:disabled {
+  background-color: #ccc; 
+  cursor: not-allowed;
+  box-shadow: none; 
+}
+
+.send-button:disabled:hover {
+  background-color: #ccc; 
+}
+
 .send-button i {
   font-size: 1.2rem;
 }

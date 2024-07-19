@@ -57,3 +57,34 @@
     max-width: 80%; 
   }
 }
+
+.spinner {
+  display: inline-block;
+  width: 4vw;
+  height: 4vw;
+  border: 8px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: #ff6961; 
+  animation: spin 1s linear infinite;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 960px) {
+  .spinner {
+    left: 45%;
+    width: 10vw;
+    height: 10vw;
+  }
+}

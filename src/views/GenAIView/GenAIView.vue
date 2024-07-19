@@ -9,7 +9,7 @@
         :text="message.text"
         :type="message.type"
       />
-      <div v-if="loading" class="relative left-0 mx-auto bg-red-500 w-32 h-32">LOADING</div>
+      <div v-if="loading" class="spinner"></div>
       <GenAIInputBox v-model:loading="loading" @sendMessage="handleSendMessage" />
     </div>
   </div>
@@ -40,9 +40,15 @@ export default {
       this.generateSystemResponse(userMessage);
     },
     generateSystemResponse(userMessage) {
-      const systemResponse = userMessage;
-      this.messages.push({ text: systemResponse, type: 'system' });
+      this.loading = true;
+      setTimeout(() => {
+        const systemResponse = userMessage; 
+        this.messages.push({ text: systemResponse, type: 'system' });
+        this.loading = false;
+      }, 2000);
     }
   }
 };
 </script>
+
+
