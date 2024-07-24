@@ -35,9 +35,9 @@ export default {
     };
   },
   methods: {
-    handleSendMessage(userMessage) {
-      this.messages.push({ text: userMessage, type: 'user' });
-      this.generateSystemResponse(userMessage);
+    handleSendMessage(messages) {
+      this.messages.push({ text: messages.userMessage, type: 'user' });
+      this.messages.push({text: messages.genAiResponse.Response, type: 'system' })
     },
     generateSystemResponse(userMessage) {
       this.loading = true;

@@ -16,6 +16,7 @@
 <script>
 import "./style.css";
 import { testRequest } from "@/services/testService.js";
+import {sendPrompt} from "@/services/genAiService.js";
 
 export default {
   name: "GenAIInputBox",
@@ -35,10 +36,10 @@ export default {
       if (this.isButtonDisabled) return;
 
       this.$emit("update:loading", true);
-      this.genAIResponse = await testRequest({ userMessage: this.userMessage });
+      this.genAIResponse = await sendPrompt({ text: this.userMessage });
       this.$emit("update:loading", false);
-      if (this.userMessage.trim()) {
-        this.$emit("sendMessage", this.userMessage);
+      if (this.genAIResponse) {
+        this.$emit("sendMessage", {userMessage: this.userMessage, genAiResponse: this.genAIResponse});
         this.userMessage = "";
       }
     },
