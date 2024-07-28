@@ -30,25 +30,35 @@ export default {
   },
   data() {
     return {
-      messages: [],
+      messages: [
+        {
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          type: 'system'
+        },
+        {
+          text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          type: 'user'
+        }
+      ],
       loading: false
     };
   },
   methods: {
-    handleSendMessage(messages) {
-      this.messages.push({ text: messages.userMessage, type: 'user' });
-      this.messages.push({text: messages.genAiResponse.Response, type: 'system' })
-    },
-    generateSystemResponse(userMessage) {
+    async handleSendMessage({ userMessage, genAiResponse }) {
+      if (!userMessage || !genAiResponse) {
+        return;
+      }
+
+      this.messages.push({ text: userMessage, type: 'user' });
       this.loading = true;
-      setTimeout(() => {
-        const systemResponse = userMessage; 
-        this.messages.push({ text: systemResponse, type: 'system' });
+
+      try {
+        this.messages.push({ text: genAiResponse.Response, type: 'system' });
+      } finally {
         this.loading = false;
-      }, 2000);
+      }
     }
   }
 };
 </script>
-
 

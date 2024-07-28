@@ -2,8 +2,14 @@ import {createWebHistory, createRouter} from "vue-router";
 import GenAIPage from "@/pages/GenAIPage.vue";
 import LoginPage from "@/pages/LoginPage.vue";
 import RegisterPage from "@/pages/RegisterPage.vue";
+import DashboardPage from "@/pages/DashboardPage.vue";
 
 const routes = [
+    {
+        name: 'DashboardPage',
+        path: '/dashboard', 
+        component: DashboardPage,
+    },
     {
         name: 'GenAIPage',
         path: '/', //just for testing

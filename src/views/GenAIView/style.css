@@ -8,7 +8,7 @@
 }
 
 .background-img {
-  background-image: url("../../images/bg_image.jpg");
+  background-image: url("../../images/bg.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@
 
 @media screen and (max-width: 960px) {
   .chat-container {
-    max-width: 80%; 
+    max-width: 80%;
   }
 }
 
@@ -64,7 +64,7 @@
   height: 4vw;
   border: 8px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  border-top-color: #ff6961; 
+  border-top-color: #ff6961;
   animation: spin 1s linear infinite;
   position: fixed;
   top: 45%;

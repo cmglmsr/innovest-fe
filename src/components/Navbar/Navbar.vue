@@ -7,16 +7,16 @@
       </div>
       <ul :class="['nav-menu', { 'active': isNavbarMenuOpen }]">
         <li class="nav-item">
-          <router-link to="/" class="nav-links">Dashboard</router-link>
+          <router-link to="/dashboard" class="nav-links">Dashboard</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/stocks" class="nav-links">Stocks</router-link>
+          <router-link to="#" class="nav-links">Stocks</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/etfs" class="nav-links">ETFs</router-link>
+          <router-link to="#" class="nav-links">ETFs</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/genai-analysis" class="nav-links">GENAI Analysis</router-link>
+          <router-link to="/" class="nav-links">GENAI Analysis</router-link>
         </li>
       </ul>
       <div class="auth-buttons-navbar">
