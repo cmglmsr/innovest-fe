@@ -7,7 +7,6 @@
           rel="noopener nofollow"
           target="_blank"
         >
-          <span class="blue-text">Track all markets on TradingView</span>
         </a>
       </div>
     </div>
@@ -25,19 +24,13 @@
         {
           "symbols": [
             [
-              "Apple",
-              "AAPL|1D"
-            ],
-            [
-              "Google",
-              "GOOGL|1D"
-            ],
-            [
-              "Microsoft",
-              "MSFT|1D"
-            ],
-            [
               "NASDAQ:NDX|1D"
+            ],
+            [
+              "BIST:XU100|1D"
+            ],
+            [
+              "XETR:DAX|1D"
             ]
           ],
           "chartOnly": false,
