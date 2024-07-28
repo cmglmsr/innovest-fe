@@ -1,7 +1,7 @@
 <template>
     <div :class="['message-box', type]">
-      <span v-if="type === 'user'" class="message-prompt">User prompt:</span>
-      <span v-if="type === 'system'" class="message-prompt">GenAI Response:</span>
+      <span v-if="type === 'user'" class="message-prompt">User:</span>
+      <span v-if="type === 'system'" class="message-prompt">Innovest AI:</span>
       {{ text }}
     </div>
   </template>

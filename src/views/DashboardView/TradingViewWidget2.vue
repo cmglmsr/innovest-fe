@@ -7,7 +7,6 @@
         rel="noopener nofollow"
         target="_blank"
       >
-        <span class="blue-text">Track all markets on TradingView</span>
       </a>
     </div>
   </div>

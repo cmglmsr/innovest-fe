@@ -35,6 +35,8 @@ export default {
     async sendMessage() {
       if (this.isButtonDisabled) return;
 
+      this.$emit('userEnteredMessage', this.userMessage)
+
       this.$emit("update:loading", true);
       this.genAIResponse = await sendPrompt({ text: this.userMessage });
       this.$emit("update:loading", false);
